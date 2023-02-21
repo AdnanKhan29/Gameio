@@ -1,0 +1,34 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="container">
+                <div class="logo">
+                    <h3 class="tag">Register Now!</h3>
+                    <br/>
+                    <p class="tag">Let your skills decide the leaderboard!</p>
+                </div>
+                <div class="box">
+                    <form action="">
+                        <input id="name" class="fill" type="text" placeholder="Username">
+                        <input id="email" class="fill" type="text" placeholder="Email address">
+                        <input class="fill" type="password" placeholder="Password">
+                        <input class="fill" type="confirmpassword" placeholder="Confirm Password">
+                        <input id="login" type="button" value="Register">
+                        <p class="center" id="for-pass"><a href="/login">Already have an account?</a></p>
+                        <div class="bar"></div>
+                        <button><a href="/login">Login</a></button>
+                    </form>
+
+                </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    </div>
+</body>
+</html>
