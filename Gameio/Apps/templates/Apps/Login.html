@@ -15,13 +15,14 @@
                     <p class="tag">Let your skills decide your leaderboard!</p>
                 </div>
                 <div class="box">
-                    <form action="">
-                        <input id="email" class="fill" type="text" placeholder="Email address or phone number">
-                        <input class="fill" type="password" placeholder="Password">
-                        <input id="login" type="button" value="Log In">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input name="username" class="fill" type="text" placeholder="Username">
+                        <input name="pass" class="fill" type="password" placeholder="Password">
+                        <input id="login" type="submit" value="Log In">
                         <p class="center" id="for-pass"><a href="/signup">Forgotten password?</a></p>
                         <div class="bar"></div>
-                        <button><a href="/signup">Create New Account</a></button>
+                        <button><a href="{% url 'signup' %}">Create New Account</a></button>
                     </form>
 
                 </div>
