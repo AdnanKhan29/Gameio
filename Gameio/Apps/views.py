@@ -7,6 +7,10 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required(login_url='Login')
+def Dashboard(request):
+    return render(request, "Apps/Dashboard.html")
+
+
 def home(request):
     return render(request, "Apps/home.html")
 
@@ -18,9 +22,9 @@ def Login(request):
         user = authenticate(request, username=username, password=pass1)
         if user is not None:
             login(request,user)
-            return redirect('home')
+            return redirect('Dashboard')
         else:
-            return HttpResponse("Username or password is incorrect!")
+            return render(request, 'login', {'error': ": Username or password is incorrect"})
     return render(request, "Apps/Login.html")
 
 
@@ -32,7 +36,7 @@ def signup(request):
         pass2 = request.POST.get('password2')
 
         if pass1 != pass2:
-            return HttpResponse("Your passwords didn't match..try again")
+            return render(request, 'signup', {'error': ": Password didn't match"})
         else:
             my_user = User.objects.create_user(uname,email,pass1)
             my_user.save()

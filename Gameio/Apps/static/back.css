@@ -1,0 +1,56 @@
+body{
+    background-size:cover;
+}
+
+.mvideo{
+    position:fixed;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    width: auto;
+    height:auto;
+    z-index:-1;
+}
+
+div{
+    font-family: vardhana;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin-top: 500px;
+}
+
+.delayed-button {
+  opacity: 0; /* hide the button initially */
+  animation-name: delay-visibility;
+  animation-duration: 1s; /* set the duration of the animation */
+  animation-delay: 5s; /* set the delay before the animation starts */
+  animation-fill-mode: forwards; /* keep the button visible after the animation ends */
+}
+
+.fb-button {
+  background-color: #3b5998; /* Facebook's brand blue color */
+  color: #fff; /* set the text color to white */
+  font-size: 16px;
+  font-weight: bold;
+  border: none; /* remove the button border */
+  border-radius: 4px; /* add some border radius */
+  padding: 12px 24px; /* add some padding to make the button more clickable */
+  cursor: pointer; /* change the cursor to a pointer on hover */
+  transition: background-color 0.3s ease; /* add a smooth transition effect */
+  position:fixed;
+}
+
+.fb-button:hover {
+  background-color: #2f477a; /* darker shade of blue on hover */
+}
+
+@keyframes delay-visibility {
+  from { opacity: 0; }
+  to { opacity: 1; } /* make the button visible at the end of the animation */
+}
+
+
+
+
