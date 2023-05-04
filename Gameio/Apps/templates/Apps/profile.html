@@ -1,0 +1,78 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Gaming Profile</title>
+	<link rel="stylesheet" href="{% static 'profile.css' %}">
+    <style>
+        .card {
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 20px;
+        }
+        img {
+           width: 100px;
+           height: 100px;
+           border-radius: 50%;
+           object-fit: cover;
+           margin-bottom: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Avatar">
+          <h1>Gamer Profile</h1>
+          <form action="">
+            <button><a href="{% url 'logout' %}">Logout</a></button>
+          </form>
+        </header>
+        <main>
+          <section>
+            <h2>Player Information</h2>
+            <table>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+              <tr>
+                <td>Player Name</td>
+                <td>John Doe</td>
+              </tr>
+              <tr>
+                <td>Level</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Games Played</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Favorite Game</td>
+                <td>Fortnite</td>
+              </tr>
+              <tr>
+                <td>Platform</td>
+                <td>PC</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>Recent Games</h2>
+            <ul>
+              <li>Fortnite (2 hours ago)</li>
+              <li>Apex Legends (yesterday)</li>
+              <li>Call of Duty: Warzone (2 days ago)</li>
+            </ul>
+          </section>
+        </main>
+        <footer>
+          <p>&copy; 2023 Gaming Profile. All rights reserved.</p>
+        </footer>
+      </div>
+    </body>
+    </html>

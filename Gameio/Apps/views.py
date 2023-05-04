@@ -34,7 +34,7 @@ def gameover(request):
     return render(request, "Apps/gameover.html")
 
 def home(request):
-    return render(request, "Apps/home.html")
+    return render(request, "Apps/Home.html")
 
 
 def Login(request):

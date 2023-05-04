@@ -1,0 +1,87 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game over</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            }
+        body {
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            background-color: black;
+        }
+        .msg{
+            color:aliceblue;
+            text-align: center;
+            font-family:fantasy ;
+            font-size: 100px;
+            margin-top: 70px;
+        }
+        .rule{
+            color: aliceblue;
+            text-align: center;
+            font-size: 24px;
+            font-family: fantasy;
+            margin-top: 5px;
+        }
+        .score{
+            color: aliceblue;
+            text-align: center;
+            font-family: fantasy;
+            font-size: 40px;
+            margin-top: 10px;
+        }
+        .buttons{
+            position: absolute;
+            text-align: center;
+            font-weight: 600;
+            line-height: 29px;
+            top: 600px;
+            right:52%;
+            padding: 10px;
+            color:rgb(0, 0, 0);
+            background-color: aliceblue;
+            border:none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height:30px;
+            
+        }
+        .buttons2{
+            position: absolute;
+            text-align: center;
+            font-weight: 600;
+            line-height: 29px;
+            top: 600px;
+            right:37%;
+            padding: 10px;
+            color:rgb(0, 0, 0);
+            background-color: aliceblue;
+            border:none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height:30px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="msg">Game Rules</h1>
+    <h3 class="rule">1. Each time you eat the apple the body grows.</h3>
+    <h3 class="rule">2. If you touch your own body.. you die!!</h3>
+    <h3 class="rule">3. Each time you eat an apple you get 10 points.</h3>
+    <h3 class="rule">4. Your score will be added to your database once you die.</h3>
+    <h3 class="rule">5. * You can't quit the game till you die !!</h3>
+    <h3 class="rule">6. Make sure you earn more points before you die</h3>
+    <h3 class="rule">7. All the Best!!</h3>
+    <a href="{% url 'Homepage' %}" class="buttons">Go Back</a>
+    <a href="{% url 'snake' %}" class="buttons2">Start</a>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game over</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            }
+        body {
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            background-color: black;
+        }
+        .msg{
+            color:aliceblue;
+            text-align: center;
+            font-family:fantasy ;
+            font-size: 150px;
+            margin-top: 120px;
+        }
+        .pagain{
+            color: aliceblue;
+            text-align: center;
+            font-family: fantasy;
+            font-size: 40px;
+            margin-top: 50px;
+        }
+        .score{
+            color: aliceblue;
+            text-align: center;
+            font-family: fantasy;
+            font-size: 40px;
+            margin-top: 10px;
+        }
+        .buttons{
+            position: absolute;
+            text-align: center;
+            font-weight: 600;
+            line-height: 29px;
+            top: 600px;
+            right:52%;
+            padding: 10px;
+            color:rgb(0, 0, 0);
+            background-color: aliceblue;
+            border:none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height:30px;
+            
+        }
+        .buttons2{
+            position: absolute;
+            text-align: center;
+            font-weight: 600;
+            line-height: 29px;
+            top: 600px;
+            right:37%;
+            padding: 10px;
+            color:rgb(0, 0, 0);
+            background-color: aliceblue;
+            border:none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 150px;
+            height:30px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="msg">Game over</h1>
+    <h2 class="score"> Your score is :</h2>
+    <h2 class="pagain">Do you wanna play again?</h2>
+    <a href="{% url 'snake' %}" class="buttons">Play Now</a>
+    <a href="{% url 'Homepage' %}" class="buttons2">Exit Game</a>
+</body>
+</html>
